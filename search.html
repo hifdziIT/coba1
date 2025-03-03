@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pencarian</title>
+</head>
+<body>
+    <h1>Hasil Pencarian</h1>
+    <p id="searchResult"></p>
+
+    <script>
+        // Ambil parameter URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q');
+
+        // Tampilkan hasil pencarian
+        if (searchQuery) {
+            document.getElementById('searchResult').textContent = `Anda mencari: ${searchQuery}`;
+        } else {
+            document.getElementById('searchResult').textContent = 'Tidak ada kata kunci pencarian.';
+        }
+    </script>
+</body>
+</html>
